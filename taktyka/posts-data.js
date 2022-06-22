@@ -1,7 +1,7 @@
 
 const takticsPostsData = [
     {
-        postType: 'video',
+        postType: 'video-post',
         link: 'https://www.youtube.com/watch?v=Svs-EaDZUWk',
         icon: '../res/img/icon/youtube-svgrepo-com.svg',
         title: 'Базові позиції готовності до стрільби',
@@ -10,7 +10,7 @@ const takticsPostsData = [
         duration: 'Час: ~15 хв.'
     },
     {
-        postType: 'video',
+        postType: 'video-post',
         link: 'https://www.youtube.com/watch?v=i9dN2LdaKYY',
         icon: '../res/img/icon/youtube-svgrepo-com.svg',
         title: 'Стрільба з-за кута будівлі (укриття)',
@@ -19,7 +19,7 @@ const takticsPostsData = [
         duration: 'Час: ~7 хв.'
     },
     {
-        postType: 'text',
+        postType: 'text-post',
         link: 'https://armyinform.com.ua/2020/02/13/transformacziya-malyh-taktychnyh-grup-na-poli-boyu/',
         icon: '../res/img/icon/text-svgrepo-com.svg',
         title: 'Основні бойові порядки для малих груп',

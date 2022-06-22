@@ -1,19 +1,43 @@
 //render taktics page
-//console.log(takticsPostsData[0].description); 
+const postsContainer = document.querySelector('.posts-container');
+if(postsContainer) {
+    const pageHead = document.querySelector('.main-header').textContent;
+    console.log(pageHead);
+    switch (pageHead) {
+        case 'Основи тактики та вогневої підготовки':
+        renderPostCard(takticsPostsData);
+        break;
+        case 'Основи надання допомоги при пораненнях':
+            renderPostCard(taktMedPostsData);
+        break;
+        // case 5:
+        //   alert( 'Перебор' );
+        //   break;
+        // default:
+        //   alert( "Нет таких значений" );
+    }
+}
 
 
-{/* <a href="https://www.youtube.com/watch?v=Svs-EaDZUWk">
-                        <section class="post video-post">
-                            <img src="../res/img/icon/youtube-svgrepo-com.svg" alt="">
-                            <div class="post-meta">
-                                <h4 class="post-title">Базові позиції готовності до стрільби</h4>
-                                <p class="post-desc">Навчальне відео по основним позиціям готовності до стрільби</p>
-                                <p class="post-type">Тип: посилання на YouTube <span class="vid-duration">Час: ~15 хв.</span></p>
-                            </div>                        
-                        </section>
-                    </a> */}
+
 function renderPostCard(postData) {
-
+    
+    postData.forEach(element => {
+        
+        const cardMarkup = `<a href=${element.link}>
+            <section class="post ${element.postType}">
+                <img src=${element.icon} alt="">
+                <div class="post-meta">
+                    <h4 class="post-title">${element.title}</h4>
+                    <p class="post-desc">${element.description}</p>
+                    <p class="post-type">${element.type}<span class="vid-duration">${element.duration}</span></p>
+                </div>                        
+            </section>
+        </a>`
+        postsContainer.innerHTML += cardMarkup;
+        
+    });
+    
 }
 
 //posts filters
