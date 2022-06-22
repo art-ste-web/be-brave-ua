@@ -182,10 +182,10 @@ a.back-btn,
     
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     .p-ui  {
-         background:  #333 !important;
-          color: white;
+        background-color:  #333 !important;
+        color: white;
     }
     
-  }
+  } */

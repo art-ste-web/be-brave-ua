@@ -1,4 +1,22 @@
-//filters
+//render taktics page
+//console.log(takticsPostsData[0].description); 
+
+
+{/* <a href="https://www.youtube.com/watch?v=Svs-EaDZUWk">
+                        <section class="post video-post">
+                            <img src="../res/img/icon/youtube-svgrepo-com.svg" alt="">
+                            <div class="post-meta">
+                                <h4 class="post-title">Базові позиції готовності до стрільби</h4>
+                                <p class="post-desc">Навчальне відео по основним позиціям готовності до стрільби</p>
+                                <p class="post-type">Тип: посилання на YouTube <span class="vid-duration">Час: ~15 хв.</span></p>
+                            </div>                        
+                        </section>
+                    </a> */}
+function renderPostCard(postData) {
+
+}
+
+//posts filters
 const vidBtn = document.getElementById('vid_btn');
 const txtBtn = document.getElementById('txt_btn');
 const vidCheckBox = document.getElementById('vid_ch');
@@ -57,38 +75,15 @@ if(vidBtn && txtBtn) {
     })
 }
 
-
-
 //dark mode
 const darkBtn = document.querySelector('.dark-btn');
 const lightBtn = document.querySelector('.light-btn');
 const mainBg = document.querySelector('.p-ui');
 darkBtn.addEventListener('click', dark);
 
-function switchDark() {
-    mainBg.style.backgroundColor = '#202022';
-    mainBg.style.color = '#eee';
-    darkBtn.style.display = 'none';
-    lightBtn.style.display = 'block';
-    lightBtn.addEventListener('click', ()=>{
-        darkBtn.style.display = 'block';
-        lightBtn.style.display = 'none';
-        mainBg.style.backgroundColor = '';
-        mainBg.style.color = '';
-    })
-}
-
 function dark() {
-    if(document.getElementById("dark")) {
-        document.getElementById("dark").disabled = false;
-    }
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = '../res/css/dark.css';
-    link.id = 'dark';
-    document.head.appendChild(link);
+    document.getElementById("dark_css").disabled = false;
     console.log("dark");
-
     darkBtn.style.display = 'none';
     lightBtn.style.display = 'block';
     lightBtn.addEventListener('click', ()=>{
@@ -96,24 +91,15 @@ function dark() {
         lightBtn.style.display = 'none';
         mainBg.style.backgroundColor = '';
         mainBg.style.color = '';
-        document.getElementById("dark").remove();
+        document.getElementById("dark_css").disabled = true;
     })
 }
 
-// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//     // dark mode
-//     console.log('dark')
-//     mainBg.style.backgroundColor = 'red';
-//     console.log(window.matchMedia);
-// }
-
-// if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
-//     console.log('🎉 Тёмный режим поддерживается');
-//   }
-
+//check system theme
 
   const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; // true
   if(prefersDarkMode) {
+    dark();
       console.log('dark active');
   }
   else {
