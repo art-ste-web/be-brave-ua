@@ -3,6 +3,10 @@
     --dark-bg: #00000c;
     --light-blue: rgb(250, 250, 250);
     --text: #a5a59f;
+    --light-blue: #01577c;
+    --dark-blue: #052247;
+    --darkest-blue: #020d1b;
+    --header-text: #b97206;
   }
 /*start page*/
 
@@ -31,5 +35,28 @@
 }
 
 .main-header {
+    color: var(--header-text);
+}
+
+.p-ui .hr-red {
+    background: var(--dark-blue);
+}
+.p-ui .primary-btn {
+    background: var(--light-blue);
     color: var(--text);
+}
+.p-ui p {
+    color: var(--text);
+}
+
+.post {
+    background-color: var(--darkest-blue);
+}
+
+.post:hover {
+    background-color: var(--dark-blue);
+}
+
+.post-meta .post-title {
+    color: #b97206;
 }

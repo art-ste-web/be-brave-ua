@@ -1,5 +1,5 @@
 
-const takticsPostsData = [
+const postsData = [
     {
         postType: 'video-post',
         link: 'https://www.youtube.com/watch?v=Svs-EaDZUWk',

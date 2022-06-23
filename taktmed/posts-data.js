@@ -1,5 +1,5 @@
 
-const taktMedPostsData = [
+const postsData = [
     {
         postType: 'video-post',
         link: 'https://www.youtube.com/playlist?list=PLYn9Qd0y2zFs-zafTh6WUaj5XLHG_lx3T',

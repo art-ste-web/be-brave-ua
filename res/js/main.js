@@ -1,23 +1,9 @@
-//render taktics page
+
+//render post cards
 const postsContainer = document.querySelector('.posts-container');
 if(postsContainer) {
-    const pageHead = document.querySelector('.main-header').textContent;
-    console.log(pageHead);
-    switch (pageHead) {
-        case 'Основи тактики та вогневої підготовки':
-        renderPostCard(takticsPostsData);
-        break;
-        case 'Основи надання допомоги при пораненнях':
-            renderPostCard(taktMedPostsData);
-        break;
-        // case 5:
-        //   alert( 'Перебор' );
-        //   break;
-        // default:
-        //   alert( "Нет таких значений" );
-    }
+        renderPostCard(postsData);
 }
-
 
 
 function renderPostCard(postData) {
@@ -110,25 +96,36 @@ function dark() {
     console.log("dark");
     darkBtn.style.display = 'none';
     lightBtn.style.display = 'block';
+    localStorage.setItem('theme', 'dark');
     lightBtn.addEventListener('click', ()=>{
         darkBtn.style.display = 'block';
         lightBtn.style.display = 'none';
-        mainBg.style.backgroundColor = '';
-        mainBg.style.color = '';
+        localStorage.setItem('theme', 'light');
         document.getElementById("dark_css").disabled = true;
     })
 }
 
-//check system theme
 
-  const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; // true
-  if(prefersDarkMode) {
-    dark();
-      console.log('dark active');
-  }
-  else {
-    console.log('light active');
-  }
 
+//set initial theme
+
+setTheme();
+function setTheme(){
+    if(!localStorage.getItem('theme')){
+        //check system theme
+        const prefersDarkMode = window.matchMedia("(prefers-color-scheme:dark)").matches; // true
+        if(prefersDarkMode) {
+            dark();
+            console.log('dark active');
+        }
+        else {
+            console.log('light active');
+        }
+    }
+    if(localStorage.getItem('theme')==='dark'){
+        dark();
+    }
+    
+}
     
     
