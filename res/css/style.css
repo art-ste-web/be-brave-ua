@@ -83,6 +83,7 @@ a.back-btn,
     border-bottom: none;
 }
 
+
 .dark-btn {
     cursor: pointer;
     width: 16px;
@@ -127,6 +128,10 @@ a.back-btn,
 
 .cont-type-sel {
     display: none;
+}
+
+.posts-container {
+    margin-bottom: 2rem;
 }
 
 .post {

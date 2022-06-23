@@ -27,7 +27,11 @@ function renderPostCard(postData) {
 }
 
 //posts filters
-const vidBtn = document.getElementById('vid_btn');
+
+filtersBtns();
+
+function filtersBtns() {
+    const vidBtn = document.getElementById('vid_btn');
 const txtBtn = document.getElementById('txt_btn');
 const vidCheckBox = document.getElementById('vid_ch');
 const txtCheckBox = document.getElementById('text_ch');
@@ -84,6 +88,8 @@ if(vidBtn && txtBtn) {
         }
     })
 }
+}
+
 
 //dark mode
 const darkBtn = document.querySelector('.dark-btn');
@@ -107,7 +113,7 @@ function dark() {
 
 
 
-//set initial theme
+//set initial theme (depends of system theme)
 
 setTheme();
 function setTheme(){
@@ -128,4 +134,5 @@ function setTheme(){
     
 }
     
+
     
