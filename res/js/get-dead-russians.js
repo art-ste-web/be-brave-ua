@@ -1,13 +1,15 @@
 //get dead russians
-let deadRus;
+let deadRusStat;
 fetch('https://russianwarship.rip/api/v1/statistics/latest')
   .then(response => response.json())
-  .then(deadRus => {
-    console.log(deadRus);
+  .then(deadRusStat => {
+    console.log(deadRusStat);
     const mainContainer = document.querySelector('.main-container');
     const warDayEl = document.querySelector('.war-day');
-    warDayEl.innerText = deadRus.data.day;
+    const orksEl = document.querySelector('.orks');
+    warDayEl.innerText = deadRusStat.data.day;
+    orksEl.innerText = `${deadRusStat.data.stats.personnel_units} (+${deadRusStat.data.increase.personnel_units})`;
 
   });
 
-  const mainContainer = document.querySelector('.main-container');
+  

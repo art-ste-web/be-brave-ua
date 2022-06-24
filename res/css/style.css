@@ -1,3 +1,5 @@
+
+
 /*start*/
 .start-screen {
     background-image: url('../img/tr.jpg');
@@ -68,6 +70,20 @@
     margin: 0.5rem 0 0 0;
     border-radius: 3px;
     font-size: .6rem;
+}
+
+.dead-rus-stats {
+    color: #f0f8ff;
+}
+
+.dead-rus-stats h4 {
+    color: #f0f8ff;
+    text-align: center;
+    font-weight: 300;
+}
+
+.dead-rus-stats ul li::before {
+    display: none;
 }
 
 

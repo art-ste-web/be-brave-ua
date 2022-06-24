@@ -1,3 +1,11 @@
+//preloader
+window.addEventListener("load", hidePreloader);
+function hidePreloader() {
+    const preloaderBlock = document.querySelector('.preloader-dark');
+    setTimeout(() => {
+        preloaderBlock.style.display = 'none';
+    }, 500); 
+}
 
 //render post cards
 const postsContainer = document.querySelector('.posts-container');

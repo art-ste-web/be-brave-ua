@@ -9,7 +9,9 @@
     --header-text: #b97206;
   }
 /*start page*/
-
+.p-ui {
+    background-color: var(--dark-bg);
+}
 
 .start-screen {
     box-shadow: inset 3000px 3000px rgba(0, 0, 0, .7);
