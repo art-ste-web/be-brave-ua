@@ -7,7 +7,7 @@ fetch('https://russianwarship.rip/api/v1/statistics/latest')
     const mainContainer = document.querySelector('.main-container');
     const warDayEl = document.querySelector('.war-day');
     const orksEl = document.querySelector('.orks');
-    warDayEl.innerText = deadRusStat.data.day;
+    warDayEl.innerText = `${deadRusStat.data.date} ${deadRusStat.data.day}`;
     orksEl.innerText = `${deadRusStat.data.stats.personnel_units} (+${deadRusStat.data.increase.personnel_units})`;
 
   });
